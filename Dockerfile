@@ -9,7 +9,7 @@ EXPOSE 8081
 
 WORKDIR /opt/doppelganger
 
-ADD https://github.com/andrewslotin/doppelganger/releases/download/1.0.0/doppelganger-1.0.0_linux_amd64.tar.gz /tmp/doppelganger.tar.gz
+ADD https://github.com/andrewslotin/doppelganger/releases/download/v1.0.1/doppelganger-1.0.1_linux_amd64.tar.gz /tmp/doppelganger.tar.gz
 RUN tar xzkf /tmp/doppelganger.tar.gz -C /opt/doppelganger &&\
     rm -rf /tmp/doppelganger.tar.gz
 

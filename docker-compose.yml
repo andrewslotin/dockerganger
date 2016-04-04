@@ -1,0 +1,15 @@
+version: '2'
+services:
+  doppelganger:
+    image: andrewslotin/doppelganger
+    ports:
+      - "8081:8081"
+    # To get an access token go to https://github.com/settings/tokens,
+    # create new token with following permissions:
+    # - public_repo (or repo if you're going to mirror private repositories too)
+    # - write:repo_hook
+    # Copy the token and paste it as DOPPELGANGER_GITHUB_TOKEN=<GITHUB_TOKEN>
+    # into .env file located in current directory. 
+    env_file: .env
+    volumes:
+      - /home/doppelganger:/var/mirrors

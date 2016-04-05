@@ -1,4 +1,7 @@
 version: '2'
+volumes:
+  doppelganger-mirrors:
+    external: true
 services:
   doppelganger:
     image: andrewslotin/doppelganger
@@ -11,5 +14,8 @@ services:
     # Copy the token and paste it as DOPPELGANGER_GITHUB_TOKEN=<GITHUB_TOKEN>
     # into .env file located in current directory. 
     env_file: .env
+    # Generally it's a good idea to use a data volume to keep the changing parts outside.
+    # This data volume can be then attached to another container running an SSH server, or
+    # an HTTP server if you want to access your mirror via HTTP.
     volumes:
-      - /home/doppelganger:/var/mirrors
+      - doppelganger-mirrors:/var/mirrors

@@ -1,7 +1,7 @@
 FROM alpine:3.3
 MAINTAINER Andrew Slotin <andrew.slotin@gmail.com>
 
-ENV DOPPELGANGER_VERSION=1.0.3
+ENV DOPPELGANGER_VERSION=1.0.4
 
 RUN apk add --update git && rm -rf /var/cache/apk/*
 RUN mkdir -p /opt/doppelganger

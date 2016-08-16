@@ -4,7 +4,7 @@ volumes:
     external: true
 services:
   doppelganger:
-    image: andrewslotin/doppelganger
+    image: andrewslotin/doppelganger:1.0
     ports:
       - "8081:8081"
     # To get an access token go to https://github.com/settings/tokens,

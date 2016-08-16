@@ -1,4 +1,4 @@
-FROM golang:alpine
+FROM golang:1.7-alpine
 MAINTAINER Andrew Slotin <andrew.slotin@gmail.com>
 
 RUN apk add --update git && rm -rf /var/cache/apk/*
